@@ -1,0 +1,10 @@
+setup.py
+CheckWorking/__init__.py
+CheckWorking/check_client.py
+OneSDKPOC.egg-info/PKG-INFO
+OneSDKPOC.egg-info/SOURCES.txt
+OneSDKPOC.egg-info/dependency_links.txt
+OneSDKPOC.egg-info/requires.txt
+OneSDKPOC.egg-info/top_level.txt
+OnesClient/__init__.py
+OnesClient/client.py
