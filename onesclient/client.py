@@ -8,6 +8,7 @@ from .endpoints import *
 
 from .excpetions import OnesClientExpection
 from .constants import *
+from .util import request_handler, request_handler_with_payload, request_handler_with_query_params
 
 
 # Loading Environment Variables
@@ -99,3 +100,76 @@ class ONESClient(object):
             logging.error(err)
             raise OnesClientExpection(ROLES_ERROR)
         
+    def get_switch_skus(self):
+        """
+        Return all switch SKUs
+        """
+        request_handler(self.url, switch_skus, self.access_token, None)
+
+    def get_asics_info(self):
+        """
+        Return all ASICs info
+        """
+        request_handler(self.url, asics, self.access_token, None)
+
+    def get_agent_version(self):
+        """
+        Return Agent version
+        """
+        request_handler(self.url, agent_version, self.access_token, None)
+
+    def get_nos_version(self):
+        """
+        Return NOS version
+        """
+        request_handler(self.url, nos_version, self.access_token, None)
+
+    def get_linux_version(self):
+        """
+        Return linux version
+        """
+        request_handler(self.url, linux_version, self.access_token, None)
+
+    def get_onie_version(self):
+        """
+        Return ONIE version
+        """
+        request_handler(self.url, onie_version, self.access_token, None)
+
+    def get_cabling_info(self):
+        """
+        Return cabling INFO
+        """
+        request_handler(self.url, cabling, self.access_token, None)
+
+    def get_device_interfaces(self, arg1):
+        """
+        Payload -> "filter": {
+                 "deviceAddress": "0c:29:ef:ce:92:20"
+                }
+        Output -> List of interfaces of a device
+        """
+        request_handler_with_payload(self.url, device_interfaces, self.access_token, None, arg1)
+
+    def get_device_peripherals(self, arg1):
+        """
+        query_params -> "filter": {
+                    {
+                    "deviceAddress" : "0c:29:ef:ce:92:20"
+                    }
+            }
+        Output -> List of peripherals
+        """
+        request_handler_with_query_params(self.url, device_peripherals, self.access_token, None, arg1)
+
+    def get_device_info(self,arg1):
+        """
+        query_params -> {"ipAddress": "10.4.4.61"}
+        Output -> List of device info
+        """
+        request_handler_with_query_params(self.url, device_info_endpoint, self.access_token,None, arg1)
+
+        
+
+    
+    

@@ -1,12 +1,26 @@
 connect = "/api/user/login"
 hardware_info = "/api/inventory/hardwareMega"
 
-# Health Endpoints
-# {
-#     "fromDate":"2023-06-18 17:44:01",
-#     "toDate":"2023-06-18 18:44:01",
-#     "deviceAddress":"0c:29:ef:ce:92:20"
-# }
-
 # Inventory Endpoints
 roles = "/api/inventory/Roles"
+switch_skus = "/api/inventory/SwitchSKUs"
+asics = "/api/inventory/ASICs"
+agent_version = '/api/inventory/AgentsVersion'
+nos_version = '/api/inventory/NOSVersion'
+linux_version = '/api/inventory/LinuxVersion'
+onie_version = '/api/inventory/ONIEVersion'
+cabling = '/api/inventory/Cabling'
+device_interfaces = "/api/inventory/Devices/interfaces"
+device_peripherals = "/api/inventory/Devices/peripherals"
+device_info_endpoint = "/api/inventory/Devices/device"
+
+# Topology Endpoints
+
+
+# Traffic Endpoints
+
+
+# Health Endpoints
+
+
+

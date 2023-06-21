@@ -4,6 +4,6 @@ class OnesClientExpection(Exception):
     """
     def __init__(self, msg =None):
         if msg is None:
-            return "Somethiong went wrong in OnceClient."
+            return "Somethiong went wrong in OnesClient."
         return msg
     
