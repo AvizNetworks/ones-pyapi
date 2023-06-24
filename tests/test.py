@@ -77,6 +77,9 @@ query_params  =  {"ipAddress": "10.4.4.61"}
 print(conn.get_device_info(query_params))
 print("....................Device_INFO.....................")
 
+print("....................NETWORK_TOPOLOGY_INFO!!.....................")
+print(conn.get_network_topology())
+print("....................NETWORK_TOPOLOGY_INFO!!.....................")
 
 
 

@@ -170,6 +170,11 @@ class ONESClient(object):
         request_handler_with_query_params(self.url, device_info_endpoint, self.access_token,None, arg1)
 
         
+    def get_network_topology(self):
+        """
+        Output -> List of device info
+        """
+        request_handler(self.url, network_topology, self.access_token,None)
 
     
     

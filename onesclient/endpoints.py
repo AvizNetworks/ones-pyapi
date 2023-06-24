@@ -15,7 +15,7 @@ device_peripherals = "/api/inventory/Devices/peripherals"
 device_info_endpoint = "/api/inventory/Devices/device"
 
 # Topology Endpoints
-
+network_topology = "/api/Topologies/graphV2"
 
 # Traffic Endpoints
 
