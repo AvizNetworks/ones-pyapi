@@ -58,10 +58,7 @@ def request_handler_with_query_params(url, endpoint_name, access_token, error_ms
             params = "filter=" + params
 
         response = requests.get(url, headers=headers, params=params, verify=False)
-        # print("#########################################")
-        # print(response.request.url)
-        # print("######################################")
-
+        
         if response.status_code == 200:
             res = response.json()
             print(json.dumps(res, indent=4))

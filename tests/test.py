@@ -11,9 +11,9 @@ conn  = ONESClient(url ='https://10.2.2.6', username="superadmin", password="Adm
 conn.connect() 
 
 # Calling Methods
-print("....................HARDWARE_INFO!!.....................")
-print(conn.get_hardware_info())
-print("....................HARDWARE_INFO!!.....................")
+# print("....................HARDWARE_INFO!!.....................")
+# print(conn.get_hardware_info())
+# print("....................HARDWARE_INFO!!.....................")
 
 
 print("....................ROLES.....................")
@@ -71,31 +71,9 @@ query_params  =  {"deviceAddress" : "0c:29:ef:ce:92:20"}
 print(conn.get_device_peripherals(query_params))
 print("....................Device_Peripherals.....................")
 
-
-print("....................Device_INFO....................")
-query_params  =  {"ipAddress": "10.4.4.61"}
-print(conn.get_device_info(query_params))
-print("....................Device_INFO.....................")
-
-
 print("....................NETWORK_TOPOLOGY_INFO!!.....................")
 print(conn.get_network_topology())
 print("....................NETWORK_TOPOLOGY_INFO!!.....................")
-
-
-print("....................FAULTY_PSUs.....................")
-print(conn.get_faulty_psus())
-print("....................FAULTY_PSUSs.....................")
-
-
-print("....................FAULTY_FANS.....................")
-print(conn.get_faulty_fans())
-print("....................FAULTY_FANS.....................")
-
-
-print("....................LINK_FLAPS.....................")
-print(conn.get_link_flaps())
-print("....................LINK_FLAPS.....................")
 
 
 print("....................CPU_UTILIZATION....................")
@@ -231,12 +209,10 @@ print("....................HEALTH_RUNNING_SERVICES....................")
 
 print("....................TRAFFIC_UTIL....................")
 query_params = {
-  "filter" :{
     "fromDate" : "2023-04-04 04:54:27",
     "toDate" : "2023-04-04 05:54:27",
     "deviceAddress" : "10.4.4.55",
     "ifname" : "Ethernet0"
-  }
 }
 print(conn.get_traffic_util(query_params))
 print("....................TRAFFIC_UTIL....................")
@@ -244,17 +220,37 @@ print("....................TRAFFIC_UTIL....................")
 
 print("....................TRAFFIC_COUNTERS....................")
 query_params = {
-  "filter" :{
     "fromDate" : "2023-04-04 04:54:27",
     "toDate" : "2023-04-04 05:54:27",
     "deviceAddress" : "10.4.4.55",
     "ifname" : "Ethernet0"
-  }
 }
 print(conn.get_traffic_counters(query_params))
 print("....................TRAFFIC_COUNTERS....................")
 
+# print("....................Device_INFO....................")
+# query_params  =  {"ipAddress": "10.4.4.61"}
+# print(conn.get_device_info(query_params))
+# print("....................Device_INFO.....................")
 
+
+print("....................FAULTY_PSUs.....................")
+print(conn.get_faulty_psus())
+print("....................FAULTY_PSUSs.....................")
+
+
+print("....................FAULTY_FANS.....................")
+print(conn.get_faulty_fans())
+print("....................FAULTY_FANS.....................")
+
+
+print("....................LINK_FLAPS.....................")
+query_params= {
+  "time" : "5 minutes",
+  "limit" : "10"
+}
+print(conn.get_link_flaps(query_params))
+print("....................LINK_FLAPS.....................")
 
 
 
