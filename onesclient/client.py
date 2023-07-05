@@ -188,13 +188,13 @@ class ONESClient(object):
         """
         request_handler(self.url, faulty_fans, self.access_token, None)
         
-    def get_link_flaps(self):
+    def get_link_flaps(self, arg1):
         """
         Return interface status
         """
-        request_handler(self.url, link_flaps, self.access_token, None)
+        request_handler_with_query_params(self.url, link_flaps, self.access_token, None, arg1)
         
-    def get_cpu_utilization(self,arg1, arg2, arg3):
+    def get_cpu_utilization(self, arg1):
         """
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
@@ -202,9 +202,9 @@ class ONESClient(object):
             "deviceAddress" : "10.4.4.55"
         }
         """
-        request_handler_with_query_params(self.url, cpu_utilization, self.access_token, None, arg1, arg2, arg3)
+        request_handler_with_query_params(self.url, cpu_utilization, self.access_token, None, arg1)
         
-    def get_memory_utilization(self, arg1, arg2, arg3):
+    def get_memory_utilization(self, arg1):
         """
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
@@ -212,9 +212,9 @@ class ONESClient(object):
             "deviceAddress" : "10.4.4.55"
         }
         """
-        request_handler_with_query_params(self.url, memory_utilization, self.access_token, None, arg1, arg2, arg3)
+        request_handler_with_query_params(self.url, memory_utilization, self.access_token, None, arg1)
         
-    def get_cpu_core_temperaure(self, arg1, arg2, arg3):
+    def get_cpu_core_temperaure(self, arg1):
         """
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
@@ -222,9 +222,9 @@ class ONESClient(object):
             "deviceAddress" : "10.4.4.55"
         }
         """
-        request_handler_with_query_params(self.url, cpu_core_temperaure, self.access_token, None, arg1, arg2, arg3)
+        request_handler_with_query_params(self.url, cpu_core_temperaure, self.access_token, None, arg1)
         
-    def get_psu_temperature(self, arg1, arg2, arg3):
+    def get_psu_temperature(self, arg1):
         """ 
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
@@ -232,9 +232,9 @@ class ONESClient(object):
             "deviceAddress" : "10.4.4.55"
         }
         """
-        request_handler_with_query_params(self.url, psu_temperature, self.access_token, None, arg1, arg2, arg3)
+        request_handler_with_query_params(self.url, psu_temperature, self.access_token, None, arg1)
         
-    def get_psu_voltage(self, arg1, arg2, arg3):
+    def get_psu_voltage(self, arg1):
         """ 
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
@@ -242,9 +242,9 @@ class ONESClient(object):
             "deviceAddress" : "10.4.4.55"
         }
         """
-        request_handler_with_query_params ( self.url, psu_voltage, self.access_token, None, arg1, arg2, arg3)
+        request_handler_with_query_params ( self.url, psu_voltage, self.access_token, None, arg1)
         
-    def get_psu_current(self, arg1, arg2, arg3):
+    def get_psu_current(self, arg1):
         """ 
         query_params -> {
            "fromDate" : "2023-05-12 11:55:24",
@@ -252,9 +252,9 @@ class ONESClient(object):
            "deviceAddress" : "10.4.4.55"
         }
         """
-        request_handler_with_query_params(self.url, psu_current, self.access_token, None, arg1, arg2, arg3)
+        request_handler_with_query_params(self.url, psu_current, self.access_token, None, arg1)
         
-    def get_fan_speed(self, arg1, arg2, arg3):
+    def get_fan_speed(self, arg1):
         """ 
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
@@ -262,9 +262,9 @@ class ONESClient(object):
             "deviceAddress" : "10.4.4.55"
         }
         """
-        request_handler_with_query_params(self.url, fan_speed, self.access_token, None, arg1, arg2, arg3)
+        request_handler_with_query_params(self.url, fan_speed, self.access_token, None, arg1)
         
-    def get_psu_power(self, arg1, arg2, arg3):
+    def get_psu_power(self, arg1):
         """ 
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
@@ -272,9 +272,9 @@ class ONESClient(object):
             " deviceAddress" : "10.4.4.55"
         }
         """
-        request_handler_with_query_params(self.url, psu_power, self.access_token, None, arg1, arg2, arg3)
+        request_handler_with_query_params(self.url, psu_power, self.access_token, None, arg1)
         
-    def get_health_services_cpu(self, arg1, arg2, arg3):
+    def get_health_services_cpu(self, arg1):
         """ 
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
@@ -282,9 +282,9 @@ class ONESClient(object):
             "deviceAddress" : "10.4.4.55"
         }
         """
-        request_handler_with_query_params(self.url, health_services_cpu, self.access_token, None, arg1, arg2, arg3)
+        request_handler_with_query_params(self.url, health_services_cpu, self.access_token, None, arg1)
         
-    def get_health_services_memory(self, arg1, arg2, arg3):
+    def get_health_services_memory(self, arg1):
         """ 
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
@@ -292,9 +292,9 @@ class ONESClient(object):
             "deviceAddress" : "10.4.4.55"
         }
         """
-        request_handler_with_query_params(self.url, health_services_memory, self.access_token, None, arg1, arg2, arg3)
+        request_handler_with_query_params(self.url, health_services_memory, self.access_token, None, arg1)
         
-    def get_health_bgp_neighbors(self, arg1, arg2, arg3):
+    def get_health_bgp_neighbors(self, arg1):
         """ 
         query_params -> {
             "fromDate" : "2023-04-04 04:54:27",
@@ -302,9 +302,9 @@ class ONESClient(object):
             "deviceAddress" : "10.4.4.55"
         }
         """
-        request_handler_with_query_params(self.url, health_bgp_neighbors, self.access_token, None, arg1, arg2, arg3)
+        request_handler_with_query_params(self.url, health_bgp_neighbors, self.access_token, None, arg1)
      
-    def get_health_trancievers(self, arg1, arg2, arg3, arg4):
+    def get_health_trancievers(self, arg1):
         """ 
         query_params -> {
             "ipAddress" : "10.4.4.55",
@@ -313,9 +313,9 @@ class ONESClient(object):
             "toDate" : "2023-06-26 11:48:55"
         }
         """    
-        request_handler_with_query_params(self.url, health_transcievers, self.access_token, None, arg1, arg2, arg3, arg4)
+        request_handler_with_query_params(self.url, health_transcievers, self.access_token, None, arg1)
         
-    def get_health_running_services(self, arg1, arg2, arg3):
+    def get_health_running_services(self, arg1):
         """ 
         query_params -> {
                     "fromDate" : "2023-05-12 11:55:24",
@@ -323,9 +323,9 @@ class ONESClient(object):
                     "deviceAddress" : "10.4.4.55"
         }
         """
-        request_handler_with_query_params(self.url, health_running_services, self.access_token, None, arg1, arg2, arg3)
+        request_handler_with_query_params(self.url, health_running_services, self.access_token, None, arg1)
     
-    def get_traffic_util(self, arg1, arg2, arg3, arg4):
+    def get_traffic_util(self, arg1):
         """ 
         query_params -> "filter" : {
             {
@@ -336,9 +336,9 @@ class ONESClient(object):
             }
         }
         """
-        request_handler_with_query_params(self.url, traffic_util, self.access_token, None, arg1, arg2, arg3, arg4)
+        request_handler_with_query_params(self.url, traffic_util, self.access_token, None, arg1)
         
-    def get_traffic_counters(self, arg1, arg2, arg3, arg4):
+    def get_traffic_counters(self, arg1):
         """ 
         query_params -> "filter" : {
             {
@@ -349,7 +349,7 @@ class ONESClient(object):
             }
         }
         """
-        request_handler_with_query_params(self.url, traffic_counters, self.access_token, None, arg1, arg2, arg3, arg4)
+        request_handler_with_query_params(self.url, traffic_counters, self.access_token, None, arg1)
         
             
         
