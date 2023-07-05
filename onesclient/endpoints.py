@@ -17,10 +17,25 @@ device_info_endpoint = "/api/inventory/Devices/device"
 # Topology Endpoints
 network_topology = "/api/Topologies/graphV2"
 
-# Traffic Endpoints
-
-
 # Health Endpoints
+faulty_psus = "/api/Dashboards/psuList"
+faulty_fans = "/api/Dashboards/fanList"
+link_flaps = "/api/Dashboards/interfaceStatus"
+cpu_utilization = "/api/health/cpuutil"
+memory_utilization = "/api/Health/memutil"
+cpu_core_temperaure = "/api/health/cpucoretemp"
+fan_speed = "/api/Health/getFanSpeed"
+psu_temperature = "api/health/psutempperature"
+psu_voltage = "/api/health/psuvoltage"
+psu_current = "/api/health/psucurrent"
+psu_power = "/api/health/psupower"
+health_services_cpu= "/api/health/servicescpu"
+health_services_memory = "/api/health/servicesmemory"
+health_bgp_neighbors = "/api/health/bgpnbrs"
+health_transcievers = "/api/health/links/transceivers"
+health_running_services = "/api/health/servicesrunning"
 
-
+# Traffic Endpoints
+traffic_util = "/api/Traffic/util"
+traffic_counters = "/api/Traffic/counters"
 
