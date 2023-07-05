@@ -6,7 +6,7 @@
 
 
 ## Installation
-
+> Download link - https://github.com/AvizNetworks/ones-restapi/blob/master/versions/onse-restapi-1.0.0.tar.gz
 ```sh
 pip install onse-restapi-1.0.0.tar.gz
 ```
