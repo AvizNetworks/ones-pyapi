@@ -1,11 +1,17 @@
-# ones-restapi 
-ONES SDK for developers and Network Engineers
+# ONSE-RESTAPI
 
-PS - This is still in <b>POC phase</b>.
+> Can connect with python environment and make ONES APIs operation seamlessly.
+> For Developers and Network Engineers
+> Supported version -> Python 3.7 and above 
 
-version 1.0.0 - https://github.com/AvizNetworks/ones-restapi/blob/master/versions/onse-restapi-1.0.0.tar.gz
 
-POC video - https://drive.google.com/file/d/1OeAtFak9pixwO1Q3HJhnrflJCe0QbK9H/view?usp=sharing <br />
-Documentation - https://docs.google.com/document/d/1ZL_lnisTJwfpxAQ-pqxIMPS5mfjOmrilV-WsX694pcM/edit#heading=h.ca9dqvsar3xe
+## Installation
+
+```sh
+pip install onse-restapi-1.0.0.tar.gz
+```
+
+
+
 
 
