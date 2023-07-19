@@ -25,13 +25,22 @@ from exceptions import FMClientExpection
 from constants import *
 import logging
 
-def get_request_handler(url, endpoint, error_msg):
+def get_request_handler(url, endpoint, error_msg, params):
     try:
         url = url + endpoint
         headers = {
             "Content-Type": "application/json",
         }
-        response = requests.get(url, headers=headers, verify=False)
+
+        # Request coming with params
+        if params != None:
+            params = params
+            response = requests.get(url, headers=headers, params=params)
+
+        # Request coming without params
+        else:
+            response = requests.get(url, headers=headers, verify=False)
+
         res = response.json()
         return res
     
@@ -40,6 +49,17 @@ def get_request_handler(url, endpoint, error_msg):
         raise FMClientExpection(error_msg)
     
 
-def post_request_handler():
-    pass
+def post_request_handler(url, endpoint, error_msg, payload):
+    try:
+        url = url + endpoint
+        headers= {
+            'Content-Type': 'application/json; charset=utf-8',
+        }
+        response = requests.post(url, headers=headers, json= payload, verify= False)
+        res = response.json()
+        return res
+    
+    except Exception as err:
+        logging.error(err)
+        return FMClientExpection(error_msg)
 

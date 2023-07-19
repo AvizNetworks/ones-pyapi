@@ -21,3 +21,10 @@ SOFTWARE.
 """
 
 CONTROLLER_VERSION_INFO_ERROR = "something went wrong, not able to fetch controller version.."
+INTENT_STATUS_ERROR = "something went wrong, not able to fetch intent."
+ZTP_ENABLE_ERROR = "ZTP enable failed, please try again.."
+REBOOT_ERROR = "Rebooting failed, please try again.."
+IMG_MGMNT_ERROR = "Not able to fetch status, please try again.."
+CUSTOM_IMAGE_UPGRADE_ERROR = "Customer image upgrade failed, please try again.."
+CONFIG_DIFF_ERROR = "config diff in UI process failed, please try again.."
+
