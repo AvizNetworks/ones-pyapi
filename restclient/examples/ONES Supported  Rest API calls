@@ -1,0 +1,549 @@
+Few Sample Rest API call flows with json structure 
+ Intent based API
+This restful api allows you to upload an entire intent file (yaml-based) and orchestrate the entire fabric/AZ in desired intent based underlay and overlay. For example, if users want to use eBGP as an underlay with VXLAN as an overlay and MC-LAG  at the leaf level, they can do so simply by expressing the need in the form of template and providing minimal parameter inputs , with the rest of the derivation and parameters handled by the ONES controller.  To validate the orchestration, every operational validation is also performed i.e. ping to peer, end to end tunnel validation, bgp neighbourship etc…
+API: intentupload
+Type: POST
+Response: string intent-id (alphanumeric)
+Input Parameters: intent yaml file
+
+Input
+Type
+List
+Description
+YAML file
+file
+NO
+Intent file for fabric
+POST /intentupload HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: 10.x.x.6:8787
+Connection: close
+User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
+Content-Length: 61
+Input
+configure_az_1.yaml
+Response:
+configure_az_1.yaml_20230223115541
+#########################################################################################################
+
+2. Show status- Generic
+
+The below API will help to get the status of orchestration progress on specific device.
+
+API: getIntentStatus
+Type: GET
+Response: progress status and error message logs in case failure/JSON
+Input Parameters: device ip address
+
+Input
+Type
+List
+Description
+intent-id
+String
+NO
+An alphanumeric intent id generated as a response to the POST method. I.e configure_az_1.yaml_20230223115541
+
+GET /getIntentStatus?intentName=configure_az_1.yaml_20230223115541 HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: 10.x.x.6:8787
+Connection: close
+User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
+Content-Length: 61
+
+Response
+[
+ {
+   "intentName": "SNMPServer",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "NTPServer",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "SYSLogServer",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "BGPConfiguration",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "HostName",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "Interfaces",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "TimeZone",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "SNMPServer",
+   "ip": "10.x.x.67",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "NTPServer",
+   "ip": "10.x.x.67",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "SYSLogServer",
+   "ip": "10.x.x.67",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "BGPConfiguration",
+   "ip": "10.x.x.67",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "HostName",
+   "ip": "10.x.x.67",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "Interfaces",
+   "ip": "10.x.x.67",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "TimeZone",
+   "ip": "10.x.x.67",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "TimeZone",
+   "ip": "10.x.x.66",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "SNMPServer",
+   "ip": "10.x.x.66",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "NTPServer",
+   "ip": "10.x.x.66",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "SYSLogServer",
+   "ip": "10.x.x.66",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "BGPConfiguration",
+   "ip": "10.x.x.66",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "HostName",
+   "ip": "10.x.x.66",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "Interfaces",
+   "ip": "10.x.x.66",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "SNMPServer",
+   "ip": "10.x.x.68",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "NTPServer",
+   "ip": "10.x.x.68",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "SYSLogServer",
+   "ip": "10.x.x.68",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "BGPConfiguration",
+   "ip": "10.x.x.68",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "HostName",
+   "ip": "10.x.x.68",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "Interfaces",
+   "ip": "10.x.x.68",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "TimeZone",
+   "ip": "10.x.x.68",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "SYSLogServer",
+   "ip": "10.x.x.79",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "HostName",
+   "ip": "10.x.x.79",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "BGPConfiguration",
+   "ip": "10.x.x.79",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "Interfaces",
+   "ip": "10.x.x.79",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "TimeZone",
+   "ip": "10.x.x.79",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "SNMPServer",
+   "ip": "10.x.x.79",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "NTPServer",
+   "ip": "10.x.x.79",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ }
+]
+############################################################################################################################################
+
+3. Image Management/ZTP
+To support image management, there are two options in place. 
+	6.1 via ZTP.
+
+6.2 custom image management via controller, no ZTP
+Step 1: Controller needs the following input
+List of devices (IP address or host name) to upgrade images
+Image path , user credentials to scp server
+
+Both ZTP and Custom image upgrades let you alter the version of the operating NOS. Below is the rest API signature for the same.
+
+API: enableZTPAndRunRequest
+Type: POST
+Response: true/false
+Input Parameters: one or more device ip address
+
+Input
+Type
+List
+Description
+ip addressess
+String
+Yes
+Device ip addresses
+Sample signature of  ZTP
+POST /enableZTPAndRunRequest HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: localhost:8080
+Connection: close
+User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
+Content-Length: 61
+
+["10.x.x.67", "10.x.x.68"]
+
+############################################################################################################################################
+3) Image Upgrade ZTP
+
+API: imageUpgradeRequest
+Type: POST
+Response: true/false
+Input Parameters:one or more device ip address and absolute path to the location where the image is stored.
+
+
+Input
+Type
+List
+Description
+<ipaddress, pathtoImage>
+Object
+Yes
+Device ip addresses and an absolute path to the location where the image is stored.
+Sample signature of CustomImgMgmt API
+POST /imageUpgradeRequest HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: localhost:8080
+Connection: close
+User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
+Content-Length: 61
+
+[{"ip":"10.x.x.67","pathToImage":"http://10.x.x.10:8191/mnt/ws/images/SONiC-mellanox-e8daeacd.bin"}]
+
+
+############################################################################################################################################
+4.Device Reboot
+
+API: rebootRequest
+Type: POST
+Response: true/false
+Input Parameters: one or more device ip address
+
+Input
+Type
+List
+Description
+ipaddresses
+String
+Yes
+Device ip addresses
+
+POST /rebootRequest HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: localhost:8080
+Connection: close
+User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
+Content-Length: 61
+Input
+["10.x.x.236"]
+Response:
+True
+
+############################################################################################################################################
+5.Diff of configuration (golden config vs current running configuration)
+
+API: getConfigDiff
+Type: GET
+Response: both config and can be delta if needed
+Input Parameters: device ip address
+
+Input
+Type
+List
+Description
+ipaddresses
+String
+Yes
+Device ip addresses
+diff_only
+boolean
+NO
+POST /getConfigDiff HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: localhost:8080
+Connection: close
+User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
+Content-Length: 61
+Input
+{ "ip": "10.x.x.66", “diff_only”: “false”}
+Response: current config on device vs config done via FM
+{
+ "orchestrated_config": "Last login: Fri Sep 30 11:44:05 2022 from 10.x.x.150\r\r\nsave\nsave\r\n\rSN2100-Leaf1# save\r\n\rSaving Configuration\r\n\rSN2100-Leaf1# show run\nshow run\r\n\rconfigure terminal\r\nrouter-id 3.0.0.2\r\nntp add 128.138.141.172\r\nclock timezone Asia/Kolkata\r\nsyslog add 10.x.x.11\r\nsnmp-server trap modify 2 10.x.x.11 port 161 vrf None community Public\r\nhostname SN2100-Leaf1\r\n!\r\ninterface ethernet Ethernet32\r\nbgp unnumbered\r\nmtu 7000\r\nforward-error-correction none\r\n!\r\ninterface ethernet Ethernet56\r\nbgp unnumbered\r\nmtu 7000\r\nforward-error-correction none\r\n!\r\ninterface loopback 1\r\nip address 3.0.0.2/32\r\n!\r\nrouter bgp 1003\r\nneighbor interface Ethernet32 remote-as external\r\nneighbor interface Ethernet56 remote-as external\r\naddress-family ipv4 unicast\r\nredistribute connected\r\nredistribute static\r\n!\r\n!\r\n!\r\n\rSN2100-Leaf1# ",
+ "ip": "10.x.x.66",
+ "current_config": " show running-config\r\n\rconfigure terminal\r\nrouter-id 3.0.0.2\r\nntp add 128.x.141.172\r\nclock timezone Asia/Kolkata\r\nsyslog add 10.x.x.11\r\nsnmp-server trap modify 2 10.x.x.11 port 161 vrf None community Public\r\nhostname SN2100-Leaf1\r\n!\r\ninterface ethernet Ethernet32\r\nbgp unnumbered\r\nmtu 7000\r\nforward-error-correction none\r\n!\r\ninterface ethernet Ethernet56\r\nbgp unnumbered\r\nmtu 7000\r\nforward-error-correction none\r\n!\r\ninterface loopback 1\r\nip address 3.0.0.2/32\r\n!\r\nrouter bgp 1003\r\nneighbor interface Ethernet32 remote-as external\r\nneighbor interface Ethernet56 remote-as external\r\naddress-family ipv4 unicast\r\nredistribute connected\r\nredistribute static\r\n!\r\n!\r\n!\r\n\rSN2100-Leaf1# "
+}
+
+############################################################################################################################################
+6. BGP Configuration
+Both BGP and BGP-U are supported.
+API: setBGPConfiguration
+Type: POST
+Response: true/false
+Input Parameters: listed below.
+Input
+Type
+List
+Description
+list_of_interfaces
+String
+Yes
+Participating interface link in BGP Config
+list_of_interface_ip
+String
+Yes
+Ip address for each of the specified links
+is_bgp_unnumbered
+boolean
+NO
+Indicates whether its bgp unnumbered deployment or not
+ASN
+String
+No
+ASN number
+is_ibgp
+boolean
+NO
+Is it i- bgp deployment or not
+loopback_interface
+String
+NO
+Loopback Interface name
+loopback_ip
+String
+NO
+Ip address of loopback interface
+list_of_remote_ip
+String
+Yes
+Peer interface ip addresses
+remote_ASN
+String
+NO
+Remote ASN number
+
+############################################################################################################################################
+7. Show status- device specific
+The below API will help to get the status of orchestration progress on specific device.
+API: getStatus
+Type: GET
+Response: progress status and error message logs in case failure/JSON
+Input Parameters: device ip address
+Input
+Type
+List
+Description
+Ip address
+String
+Yes
+Device ip address
+GET /getStatus?ip=10.x.x.5 HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: 10.x.x.6:8787
+Connection: close
+User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
+Content-Length: 61
+Response
+[
+ {
+   "intentName": "SNMPServer",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "NTPServer",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "SYSLogServer",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "BGPConfiguration",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "HostName",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "Interfaces",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ },
+ {
+   "intentName": "TimeZone",
+   "ip": "10.x.x.69",
+   "verification_status": "1",
+   "config_status": "1",
+   "logs": ""
+ }
+]
+############################################################################################################################################
