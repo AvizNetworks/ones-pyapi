@@ -110,3 +110,30 @@ class FMClient(object):
         payload -> { "ip": "10.x.x.x"}
         """
         return post_request_handler(self.url, config_diff_endpoint, CONFIG_DIFF_ERROR, ip_address)
+    
+    def backup_config_endpoint(self, payload):
+        """ 
+        To take backup on cofiguration
+        Method -> Post
+        payload -> [{"ip":"10.x.x.1","label":"kuldip created13"}]
+        """
+        return post_request_handler(self.url, backup_config_endpoint, BACKUP_CONFIG_ERROR, payload)
+    
+    def configs_list_to_restore_endpoint(self, list_of_ips):
+        """ 
+        List of all available backup configuration snapshots.
+        Method -> Post
+        Payload -> list of IPs -> ["10.x.x.12","10.x.x.11"]
+        """
+        return post_request_handler(self.url, configs_list_to_restore_endpoint, CONFIGS_LIST_RESTORE_ERROR, list_of_ips)
+    
+    def restore_config_endpoint(self, payload):
+        """ 
+        To restoring the specific configuration on the target device/s.
+        Method -> Post
+        Payload -> [{"ip":"10.x.x.12","timestamp":"USERINPUT"},
+                    {"ip":"10.x.x.11","timestamp":"USERINPUT"}]
+        """
+        return post_request_handler(self.url, restore_config_endpoint, RESTORE_CONFIG_ERROR, payload)
+    
+    

@@ -28,3 +28,7 @@ controller_fm_version_endpoint = "/getVersion"
 image_mgmnt_status_endpoint = "/getImgmgmtStatus"
 custom_image_upgrade_endpoint = "/imageUpgradeRequest"
 config_diff_endpoint = "/getConfigDiff"
+backup_config_endpoint = "/backupconfig"
+configs_list_to_restore_endpoint = "/configslisttorestore"
+restore_config_endpoint = "/restoreconfig"
+
