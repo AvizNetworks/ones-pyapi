@@ -1,5 +1,5 @@
 # Telemetry Examples
-This is how we can telemetry apis and use its value for further process.
+This is how we can use telemetry apis and use its value for further process.
 
 ```py
 # Importing module
@@ -208,10 +208,6 @@ query_params = {
     "ifname" : "Ethernet0"
 }
 print(conn.get_traffic_counters(query_params))
-
-# print("Device_INFO")
-# query_params  =  {"ipAddress": "10.4.4.61"}
-# print(conn.get_device_info(query_params))
 
 
 print("FAULTY_PSUs.")
