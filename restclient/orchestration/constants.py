@@ -30,4 +30,6 @@ CONFIG_DIFF_ERROR = "config diff in UI process failed, please try again.."
 BACKUP_CONFIG_ERROR = "Backup config failed, please try again.."
 CONFIGS_LIST_RESTORE_ERROR = "congigs list restore failed, please try again .."
 RESTORE_CONFIG_ERROR = " Restoring specif congiguration of target devices failed , please try again "
+BGP_OPERATION_ERROR = "BGP configuration failed, please try again.."
+UPLOAD_IMAGE_ERROR = "Upload image failed, please try again.."
 

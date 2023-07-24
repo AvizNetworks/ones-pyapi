@@ -31,4 +31,6 @@ config_diff_endpoint = "/getConfigDiff"
 backup_config_endpoint = "/backupconfig"
 configs_list_to_restore_endpoint = "/configslisttorestore"
 restore_config_endpoint = "/restoreconfig"
+bgp_operations_endpoint = "/configreplace"
+upload_endpoint = "/upload"
 
