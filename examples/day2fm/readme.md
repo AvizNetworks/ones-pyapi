@@ -11,26 +11,26 @@ import json
 
 ## Setting Up connection
 ```py
-conn = FMClient(url = "http://10.x.x.x:<port_number>") #usually <port_number> will be 8787
+conn = FMClient(url = "http://192.168.x.x:<port_number>") #usually <port_number> will be 8787
 ```
 
 ### Backup on Config
 ```py
-payload = [{"ip":"10.x.x.1","label":"test_backup"}]
+payload = [{"ip":"192.168.0.xx","label":"test_backup"}]
 result = conn.backup_on_config(payload)
 ```
 
 ### Get all backups
 ```py
-payload = ["10.x.x.12","10.x.x.11"]
+payload = ["192.168.0.xx","192.168.0.xy"]
 result = conn.backups(payload)
 ```
 
 ### Restore Config
 ```py
 payload = [
-    {"ip":"10.x.x.12","timestamp":"USERINPUT"},
-    {"ip":"10.x.x.11","timestamp":"USERINPUT"}
+    {"ip":"192.168.0.xx","timestamp":"USERINPUT"},
+    {"ip":"192.168.0.xy","timestamp":"USERINPUT"}
 ]
 result = conn.restore_config(payload)
 ```
@@ -38,7 +38,7 @@ result = conn.restore_config(payload)
 ### Custom Image upgrade
 To Trigger custom Image upgrade request
 ```py
-payload_for_image_upgrade = [{"ip":"10.x.x.3","pathToImage":"http://10.x.x.x:8192/path_of_file/filename.bin"}]
+payload_for_image_upgrade = [{"ip":"192.168.0.x","pathToImage":"http://192.168.0.x:8192/path_of_file/filename.bin"}]
 result = conn.custom_image_upgrade(payload_for_image_upgrade)
 ```
 
@@ -46,7 +46,7 @@ result = conn.custom_image_upgrade(payload_for_image_upgrade)
 ### ZTP enable / Image Upgrade
 To Trigger the ZTP, it take one more device IPs as input
 ```py
-payload = ["10.x.x.2", "10.x.x.3"] 
+payload = ["192.168.0.xx", "192.168.0.xy"] 
 result = conn.ztp_enable(payload) # list of IPs
 ```
 
@@ -54,7 +54,7 @@ result = conn.ztp_enable(payload) # list of IPs
 ### Get Config Difference
 To get the data to show in config diff in UI
 ```py
-payload_for_config_diff = { "ip": "109.x.x.x6"}
+payload_for_config_diff = { "ip": "192.168.x.x6"}
 result = conn.get_config_diff(payload_for_config_diff)
 ```
 
@@ -67,7 +67,7 @@ result = conn.get_controller_version()
 ### Get management operation status of images
 payload can be single IP, or list of IPs
 ```py
-payload = ["10.x.x.x1"]
+payload = ["192.168.0.x1"]
 
 status =  conn.get_image_mgmnt_status(payload)
 print(json.dumps(status, indent= 4))
@@ -77,7 +77,7 @@ print(json.dumps(status, indent= 4))
 ### Reboot a device
 Only single ip should be pass at a time
 ```py
-payload = ["10.x.x.x1"]
+payload = ["192.168.0.x1"]
 result = conn.reboot(payload)
 ```
 
