@@ -14,19 +14,19 @@ import json
 conn = FMClient(url = "http://192.168.x.x:<port_number>") #usually <port_number> will be 8787
 ```
 
-### Backup on Config
+## Backup on Config
 ```py
 payload = [{"ip":"192.168.0.xx","label":"test_backup"}]
 result = conn.backup_on_config(payload)
 ```
 
-### Get all backups
+## Get all backups
 ```py
 payload = ["192.168.0.xx","192.168.0.xy"]
 result = conn.backups(payload)
 ```
 
-### Restore Config
+## Restore Config
 ```py
 payload = [
     {"ip":"192.168.0.xx","timestamp":"USERINPUT"},
@@ -35,7 +35,7 @@ payload = [
 result = conn.restore_config(payload)
 ```
 
-### Custom Image upgrade
+## Custom Image upgrade
 To Trigger custom Image upgrade request
 ```py
 payload_for_image_upgrade = [{"ip":"192.168.0.x","pathToImage":"http://192.168.0.x:8192/path_of_file/filename.bin"}]
@@ -43,7 +43,7 @@ result = conn.custom_image_upgrade(payload_for_image_upgrade)
 ```
 
 
-### ZTP enable / Image Upgrade
+## ZTP enable / Image Upgrade
 To Trigger the ZTP, it take one more device IPs as input
 ```py
 payload = ["192.168.0.xx", "192.168.0.xy"] 
@@ -51,14 +51,14 @@ result = conn.ztp_enable(payload) # list of IPs
 ```
 
 
-### Get Config Difference
+## Get Config Difference
 To get the data to show in config diff in UI
 ```py
 payload_for_config_diff = { "ip": "192.168.x.x6"}
 result = conn.get_config_diff(payload_for_config_diff)
 ```
 
-### Get Controller version
+## Get Controller version
 ```py
 print("Controller Version ->")
 result = conn.get_controller_version()
