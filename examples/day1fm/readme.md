@@ -1,4 +1,4 @@
-# Day 1 Orchestration Example
+# Day 1 Orchestration example
 
 This illustration demonstrates the deployment of the configuration using an intent-based YAML template, while also offering a practical instance of checking the status of the intent operation.
 
