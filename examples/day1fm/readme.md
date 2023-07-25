@@ -30,7 +30,6 @@ This method takes Yaml file as input, and will be used by the fabric manager to 
 file = "<Path of Yaml file>"
 result = conn.day1_intent_ovd_template(file)
 ```
-[Yaml Templates](https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day1fm/yaml-templates)
 
 ## Intent Status
 This method retrieve Generic Intent Status for provisioning on SONiC enabled fabric switches . This method allows network  operators  to  get the status of orchestration progress on a specific switch in SONiC fabric  enrolled with ONES application.
