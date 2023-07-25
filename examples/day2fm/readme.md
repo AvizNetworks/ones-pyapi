@@ -1,6 +1,6 @@
 
 # Day2 Operations Example
-Importing ONES Fabric Manager Agent
+## Importing ONES Fabric Manager Agent
 
 ```py
 from client import FMClient
