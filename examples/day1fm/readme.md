@@ -15,7 +15,7 @@ conn = FMClient(url = "http://10.x.x.x:<port_number>")
 ```
 
 ## Deploy Config 
-This method takes Yaml file as input, and shall be used by the fabric manager to orchestrate the network. There are pre-validated templates for various data center fabric deployments using SONiC. Yaml templates can be found [here](https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day1fm/yaml-templates)
+This method takes Yaml file as input, and will be used by the fabric manager to orchestrate the network. There are pre-validated templates for various data center fabric deployments using SONiC, listed below. Yaml templates can be found [here](https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day1fm/yaml-templates)
 
 - BGP IP CLOS
 - BGP IP CLOS with MC LAG 
