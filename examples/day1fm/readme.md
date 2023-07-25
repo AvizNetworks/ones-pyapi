@@ -10,14 +10,6 @@ conn = FMClient(url = "http://10.x.x.x:port_number")
 #usually port_number will be 8787
 ```
 
-
-# BGP operation
-```py
-file = "path of YAML file"
-flag = True 
-result = conn.bgp_operation(config_file_path=file, diff_flag=flag)
-```
-
 # Deploy Config 
 This API will take a YAML template as input to automatically generate the network configuration for the following deployments, validate the same and apply to make the data center fabric Operational with single click.
 - BGP IP CLOS
@@ -29,17 +21,16 @@ This API will take a YAML template as input to automatically generate the networ
 
 
 ```py
-# UPLOAD 
+# Deploy Config
 file = "path of YAML file"
-result = conn.upload_image(file)
+result = conn.day1_intent_ovd_template(file)
+```
+
+# Intent Status
+```py
+result = conn.get_intent_status()
 ```
 
  ### Please Note - 
- Day1Fm and Day2FM calls are not asynchronus, we need to wait unitl the one API call completed successfully or Not.
- It is recommend to run **get_image_mgmnt_status()** after each calls, It will return values for **device_action** feild, 
- On the basis of status field, we get the status of an Image 
-
- - device_action = 0    **Failed**
- - device_action = 1    **Device is Free, can take any action**
- - device_action = 2    **image management operations in progress (custom/zip)**
- - device_action = 3    **reboot is in progress**
+ Day1 orchestration calls are not asynchronus, we need to wait unitl the one API call completed successfully or Not.
+ Use **get_intent_status()** status and perform further operations (Day 2 Operations) accordingly.

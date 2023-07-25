@@ -141,7 +141,7 @@ class FMClient(object):
     
     # Generate and Apply Config
 
-    def upload_image(self, template_path):
+    def day1_intent_ovd_template(self, template_path):
         """
         This API will take a YAML template as input to automatically generate the network configuration for the following 
         deployments, validate the same and apply to make the data center fabric Operational with single click.
@@ -168,31 +168,31 @@ class FMClient(object):
             raise FMClientExpection(UPLOAD_IMAGE_ERROR)
 
 
-    def bgp_operation(self, config_file_path, diff_flag):
-        """
-        Params -> config_file_path, diff_flag
-        config_file_path --> path of yaml file
-        diff_flag  True --> is will show onlyconfig
-                   False --> is will dump the config from file to device
-        """
-        try: 
-            result_dict = {}
-            cfg_file_upload = {'file': open(config_file_path, 'rb')}
-            values = {'onlydiff':diff_flag}
+    # def bgp_operation(self, config_file_path, diff_flag):
+    #     """
+    #     Params -> config_file_path, diff_flag
+    #     config_file_path --> path of yaml file
+    #     diff_flag  True --> is will show onlyconfig
+    #                False --> is will dump the config from file to device
+    #     """
+    #     try: 
+    #         result_dict = {}
+    #         cfg_file_upload = {'file': open(config_file_path, 'rb')}
+    #         values = {'onlydiff':diff_flag}
 
-            url_for_bgp_operation = self.url + bgp_operations_endpoint
-            getdata = requests.post(url_for_bgp_operation, files=cfg_file_upload, data=values)
-            if getdata.status_code != 200:
-                print(BGP_OPERATION_ERROR)
-                result_dict ['status'] = 'FAIL'
-            else:
-                result_dict ['status'] = 'PASS'
-            result_dict ['logs'] = getdata.json()    
-            return result_dict
+    #         url_for_bgp_operation = self.url + bgp_operations_endpoint
+    #         getdata = requests.post(url_for_bgp_operation, files=cfg_file_upload, data=values)
+    #         if getdata.status_code != 200:
+    #             print(BGP_OPERATION_ERROR)
+    #             result_dict ['status'] = 'FAIL'
+    #         else:
+    #             result_dict ['status'] = 'PASS'
+    #         result_dict ['logs'] = getdata.json()    
+    #         return result_dict
         
-        except Exception as err:
-            logging.error(err)
-            raise FMClientExpection(BGP_OPERATION_ERROR)
+    #     except Exception as err:
+    #         logging.error(err)
+    #         raise FMClientExpection(BGP_OPERATION_ERROR)
 
             
         
