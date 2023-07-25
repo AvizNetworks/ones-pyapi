@@ -12,6 +12,26 @@ import json
 conn = FMClient(url = "http://10.x.x.x:port_number") #usually port_number will be 8787
 ```
 
+### Backup on Config
+```py
+payload = [{"ip":"10.x.x.1","label":"test_backup"}]
+result = conn.backup_on_config(payload)
+```
+
+### Get all backups
+```py
+payload = ["10.x.x.12","10.x.x.11"]
+result = conn.backups(payload)
+```
+
+### Restore Config
+```py
+payload = [
+    {"ip":"10.x.x.12","timestamp":"USERINPUT"},
+    {"ip":"10.x.x.11","timestamp":"USERINPUT"}
+]
+result = conn.restore_config(payload)
+```
 
 ### Custom Image upgrade
 To Trigger custom Image upgrade request
