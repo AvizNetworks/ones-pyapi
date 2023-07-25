@@ -1,5 +1,7 @@
 
-# Day2 Operations Example
+# Day2 Operations example
+
+This illustration demonstrates various day 2 operations such as backup&restore, compare config, image upgrade, reboot a device etc.
 ## Importing ONES Fabric Manager Agent
 
 ```py

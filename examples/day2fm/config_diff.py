@@ -1,4 +1,6 @@
 from client import FMClient
 
-payload_for_config_diff = { "ip": "109.x.x.x6"}
+conn = FMClient(url = "http://192.168.0.1:8787")
+
+payload_for_config_diff = { "ip": "192.168.0.xx"}
 result = conn.get_config_diff(payload_for_config_diff)

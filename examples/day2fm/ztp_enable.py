@@ -1,6 +1,6 @@
 from client import FMClient
 import json
 
-conn = FMClient(url = "http://10.x.x.x:<port_number>") 
-payload = ["10.x.x.2", "10.x.x.3"] 
+conn = FMClient(url = "http://192.168.0.1:8787")
+payload = ["192.168.0.xx", "192.168.0.xx"] 
 result = conn.ztp_enable(payload) 
