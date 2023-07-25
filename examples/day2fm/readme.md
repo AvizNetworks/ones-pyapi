@@ -9,7 +9,7 @@ import json
 
 ## Setting Up connection
 ```py
-conn = FMClient(url = "http://10.x.x.x:port_number") #usually port_number will be 8787
+conn = FMClient(url = "http://10.x.x.x:<port_number>") #usually <port_number> will be 8787
 ```
 
 ### Backup on Config
@@ -84,10 +84,8 @@ result = conn.reboot(payload)
 result = conn.controller_fm_version()
 ```
 
- ### Please Note - 
- Day1Fm and Day2FM calls are not asynchronus, we need to wait unitl the one API call completed successfully or Not.
- It is recommend to run **get_image_mgmnt_status()** after each calls, It will return values for **device_action** feild, 
- On the basis of status field, we get the status of an Image 
+ ### Note - 
+ The API calls  Day2FM are synchronous, meaning we have to wait for one API call to complete successfully or fail before proceeding. To ensure proper synchronization, it is advisable to call the **function get_image_mgmnt_status()** after each API call. This function will provide the values for the **device_action** field, which, in turn, will allow us to determine the status of an image based on the status field.
 
  - device_action = 0    **Failed**
  - device_action = 1    **Device is Free, can take any action**
