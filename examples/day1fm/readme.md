@@ -13,7 +13,7 @@ conn = FMClient(url = "http://10.x.x.x:<port_number>")
 ```
 
 ## Deploy Config 
-This API will take a YAML template as input to automatically generate the network configuration for the following deployments, validate the same and apply to make the data center fabric Operational with single click.  [Yaml Templates](https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day1fm/yaml-templates)
+This API will take a YAML template as input to automatically generate the network configuration for the following deployments, validate the same and apply to make the data center fabric Operational with single click. 
 - BGP IP CLOS
 - BGP IP CLOS with MC LAG 
 - Layer 2 VXLAN with MCLAG
@@ -27,6 +27,7 @@ This API will take a YAML template as input to automatically generate the networ
 file = "<Path of Yaml file>"
 result = conn.day1_intent_ovd_template(file)
 ```
+[Yaml Templates](https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day1fm/yaml-templates)
 
 ## Intent Status
 Show Generic Status - Retrieve Generic Intent Status for provisioning on sonic enabled fabric switches . This restful API allows network  operators  to  get the status of orchestration progress on a specific switch in sonic fabric  enrolled with ONES application.
