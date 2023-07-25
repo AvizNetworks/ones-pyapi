@@ -1,4 +1,4 @@
-# Day1 operations Example
+# Day 1 Orchestration Example
 
 ```py
 from client import FMClient
@@ -18,7 +18,7 @@ flag = True
 result = conn.bgp_operation(config_file_path=file, diff_flag=flag)
 ```
 
-# Image Upload 
+# Deploy Config 
 This API will take a YAML template as input to automatically generate the network configuration for the following deployments, validate the same and apply to make the data center fabric Operational with single click.
 - BGP IP CLOS
 - BGP IP CLOS with MC LAG 
