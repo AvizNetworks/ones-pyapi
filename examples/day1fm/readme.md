@@ -13,7 +13,7 @@ conn = FMClient(url = "http://10.x.x.x:<port_number>")
 ```
 
 ## Deploy Config 
-This API will take a YAML template as input to automatically generate the network configuration for the following deployments, validate the same and apply to make the data center fabric Operational with single click. 
+This API will take a YAML template as input to automatically generate the network configuration for the following deployments, validate the same and apply to make the data center fabric Operational with single click.  [Yaml Templates](https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day1fm/yaml-templates)
 - BGP IP CLOS
 - BGP IP CLOS with MC LAG 
 - Layer 2 VXLAN with MCLAG
