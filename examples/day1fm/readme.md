@@ -33,7 +33,7 @@ result = conn.day1_intent_ovd_template(file)
 [Yaml Templates](https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day1fm/yaml-templates)
 
 ## Intent Status
-Show Generic Status - Retrieve Generic Intent Status for provisioning on sonic enabled fabric switches . This restful API allows network  operators  to  get the status of orchestration progress on a specific switch in sonic fabric  enrolled with ONES application.
+This method retrieve Generic Intent Status for provisioning on SONiC enabled fabric switches . This method allows network  operators  to  get the status of orchestration progress on a specific switch in SONiC fabric  enrolled with ONES application.
 ```py
 result = conn.get_intent_status()
 ```
