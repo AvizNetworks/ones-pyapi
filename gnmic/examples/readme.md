@@ -304,6 +304,10 @@ Output:
 
 ```sh
 gnmic -a 10.4.4.61:50052 -u admin -p YourPaSsWoRd --skip-verify subscribe --path "components/component" --stream-mode sample --sample-interval 100s --qos 0
+```
+
+Output:
+```sh
 {
   "source": "10.4.4.61:50052",
   "subscription-name": "default-1679453218",
@@ -328,5 +332,4 @@ gnmic -a 10.4.4.61:50052 -u admin -p YourPaSsWoRd --skip-verify subscribe --path
         "components/component/state/empty": false
       }
     },
-
 ```
