@@ -1,1 +1,3 @@
-prometheus related stuff will go here
+# Integrated ONES with Prometheus - Screenshot
+
+![Screenshot](example.png)
