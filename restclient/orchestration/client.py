@@ -20,10 +20,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from endpoints import *
-from exceptions import *
-from constants import *
-from utils import get_request_handler, post_request_handler
+from .endpoints import *
+from .exceptions import *
+from .constants import *
+from .utils import get_request_handler, post_request_handler
 import requests
 import logging
 

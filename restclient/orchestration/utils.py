@@ -21,8 +21,8 @@ SOFTWARE.
 """
 
 import requests
-from exceptions import FMClientExpection
-from constants import *
+from .exceptions import FMClientExpection
+from .constants import *
 import logging
 
 def get_request_handler(url, endpoint, error_msg, params):
