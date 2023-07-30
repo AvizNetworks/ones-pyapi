@@ -28,24 +28,24 @@ theme:
       alternate_style: true
   nav:
     - ONES APIs: index.md
-    - ONES APIs for Network Telemetry: Ones API For Network Telemetry/OnesAPIForNetworkTelemetry.md
-    - Secured APIs for NetOps Monitoring: Ones API For Network Telemetry/Secured APIs For NetOps Monitoriing/SecureAPIsForNetOpsMonitoring.md
-    - Streaming Telemetry: Ones API For Network Telemetry/Streaming Telemetry/StreamingTelemetry.md
+    - ONES APIs for Network Telemetry: Ones_API_For_Network_Telemetry/OnesAPIForNetworkTelemetry.md
+    - Secured APIs for NetOps Monitoring: Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/SecureAPIsForNetOpsMonitoring.md
+    - Streaming Telemetry: Ones_API_For_Network_Telemetry/Streaming_Telemetry/StreamingTelemetry.md
     - Overview - ONES Agent:
-      - ONES Agent: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/OnesAgent.md
-      - GNMI Clients: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/gnmiClient.md
-      - Data Models: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/data_models.md
-      - System Resources: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/gnmic_open_config_path_system_resouerces.md
-      - BGP control plane: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/bgp_controlplanes.md
-      - LLDP neighbors: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/lldp_neighbours.md
-      - Device interfaces: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/device_interface.md
-      - Platform peripherals: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/platform_peripherals.md
+      - ONES Agent: Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/OnesAgent.md
+      - GNMI Clients: Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/gnmiClient.md
+      - Data Models: Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/data_models.md
+      - System Resources: Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/gnmic_open_config_path_system_resouerces.md
+      - BGP control plane: Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/bgp_controlplanes.md
+      - LLDP neighbors: Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/lldp_neighbours.md
+      - Device interfaces: Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/device_interface.md
+      - Platform peripherals: Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/platform_peripherals.md
 
-    - ONES APIs for Orchestration: Ones For Orchestration/OnesForOrchestration.md
+    - ONES APIs for Orchestration: Ones_For_Orchestration/OnesForOrchestration.md
     - Overview - Day 1 Orchestration:
-      - Day 1 Orchestration: Ones For Orchestration/Day 1 Orchestration/Day1Orchestration.md
-      - Day 2 NetOps: Ones For Orchestration/Day 1 Orchestration/index.md
-    - ONES Integration with Prometheus: Ones Integration With Prometheus/index.md
+      - Day 1 Orchestration: Ones_For_Orchestration/Day_1_Orchestration/Day1Orchestration.md
+      - Day 2 NetOps: Ones_For_Orchestration/Day_1_Orchestration/index.md
+    - ONES Integration with Prometheus: Ones_Integration_With_Prometheus/index.md
 
 
 
