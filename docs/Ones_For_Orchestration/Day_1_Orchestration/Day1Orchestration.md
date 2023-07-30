@@ -36,5 +36,5 @@ This method retrieve Generic Intent Status for provisioning on SONiC enabled fab
 result = conn.get_intent_status()
 ```
 
- ### Note - 
- Day 1 orchestration calls are synchronous. We need to await the command's completion status, determined using **get_intent_status()**, before proceeding with any subsequent commands.
+### Note - 
+Day 1 orchestration calls are synchronous. We need to await the command's completion status, determined using **get_intent_status()**, before proceeding with any subsequent commands.
