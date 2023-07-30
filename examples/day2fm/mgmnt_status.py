@@ -1,4 +1,4 @@
-from client import FMClient
+from restclient.orchestration.client import FMClient
 import json
 
 conn = FMClient(url = "http://192.168.0.1:8787")

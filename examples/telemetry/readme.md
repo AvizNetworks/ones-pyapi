@@ -3,7 +3,7 @@ This is how we can use telemetry apis and use its value for further process.
 
 ```py
 # Importing module
-from onesclient.client import ONESClient
+from restclient.telemetry.client import ONESClient 
 ```
 
 

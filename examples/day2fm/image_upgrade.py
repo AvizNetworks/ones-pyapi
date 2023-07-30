@@ -1,4 +1,4 @@
-from client import FMClient
+from restclient.orchestration.client import FMClient
 
 conn = FMClient(url = "http://192.168.0.1:8787")
 payload_for_image_upgrade = [{"ip":"192.168.0.xx","pathToImage":"http://192.168.0.xx:8192/path_of_file/filename.bin"}]
