@@ -1,0 +1,3 @@
+# ONES Agent 
+
+A lightweight agent that can be installed on SONiC devices which latch on to the SONiC architecture to collect the critical data on the node, maintaining the integrity of the data. These data points are exported to clients such as ONES collectors or 3rd party collectors using gNMI/gRPC techniques along with the OpenConfig path. This enables ONES to be Hardware agnostic allowing it to pull vital information from any ASIC running SONiC. 

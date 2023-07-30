@@ -1,18 +1,18 @@
-site_name: Ones-OpenSDK
-repo_url: https://github.com/AvizNetworks/ones-restapi
+site_name: ONES - PyAPI
+repo_url: https://github.com/AvizNetworks/ones-pyapi
 theme:
-  name: material
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/weather-night
-        name: Switch to light mode
+  name: readthedocs
+  # palette:
+  #   - media: "(prefers-color-scheme: light)"
+  #     scheme: default
+  #     toggle:
+  #       icon: material/weather-sunny
+  #       name: Switch to dark mode
+  #   - media: "(prefers-color-scheme: dark)"
+  #     scheme: slate
+  #     toggle:
+  #       icon: material/weather-night
+  #       name: Switch to light mode
   favicon: _media/favicon.ico
   features:
     - content.action.edit
@@ -27,20 +27,30 @@ theme:
   - pymdownx.tabbed:
       alternate_style: true
   nav:
-  - Home: index.md
-  - ONES-API:
-    - health-api : ones-api/health-api/health-api.md
-    - health-client: ones-api/health-client/health-client.md
-    - health-connect-methods: ones-api/health-connect-methods/health-connect-method.md
-    - inventory-api : ones-api/inventory-api/inventory-api.md
-    - inventory-client: ones-api/inventory-client/inventory-client.md
-    - inventory-connect-methods: ones-api/inventory-connect-methods/inventory-connect-methods.md
-    - topology-api: ones-api/topology-api/topology-api.md
-    - topology-client: ones-api/topology-client/topology-client.md
-    - topology-connect-method: ones-api/topology-connect-method/topology-connect-method.md
-    - traffic-api: ones-api/traffic-api/traffic-api.md
-    - traffic-client: ones-api/traffic-client/traffic-client.md
-    - traffic-connect-method: ones-api/traffic-connect-method/traffic-connect-method.md
+    - ONES APIs: index.md
+    - ONES APIs for Network Telemetry: Ones API For Network Telemetry/OnesAPIForNetworkTelemetry.md
+    - Secured APIs for NetOps Monitoring: Ones API For Network Telemetry/Secured APIs For NetOps Monitoriing/SecureAPIsForNetOpsMonitoring.md
+    - Streaming Telemetry: Ones API For Network Telemetry/Streaming Telemetry/StreamingTelemetry.md
+    - Overview - ONES Agent:
+      - ONES Agent: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/OnesAgent.md
+      - GNMI Clients: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/gnmiClient.md
+      - Data Models: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/data_models.md
+      - System Resources: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/gnmic_open_config_path_system_resouerces.md
+      - BGP control plane: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/bgp_controlplanes.md
+      - LLDP neighbors: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/lldp_neighbours.md
+      - Device interfaces: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/device_interface.md
+      - Platform peripherals: Ones API For Network Telemetry/Streaming Telemetry/ONES AGENT/platform_peripherals.md
+
+    - ONES APIs for Orchestration: Ones For Orchestration/OnesForOrchestration.md
+    - Overview - Day 1 Orchestration:
+      - Day 1 Orchestration: Ones For Orchestration/Day 1 Orchestration/Day1Orchestration.md
+      - Day 2 NetOps: Ones For Orchestration/Day 1 Orchestration/index.md
+    - ONES Integration with Prometheus: Ones Integration With Prometheus/index.md
+
+
+
+
+  
 
 
 
