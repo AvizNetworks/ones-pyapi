@@ -1,1 +1,1 @@
-This folder conatin ones-restapi executables.🚀
+This folder conatin ones-pyapi packages.🚀
