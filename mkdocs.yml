@@ -18,6 +18,8 @@ theme:
   nav:
     - ONES APIs: index.md
     - ONES APIs for Network Telemetry: Ones_API_For_Network_Telemetry/OnesAPIForNetworkTelemetry.md
+    - API Documentation:
+      - Methods Definitions: Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/API_Documentation/readme.md
     - Secured APIs for NetOps Monitoring: Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/SecureAPIsForNetOpsMonitoring.md
     - Streaming Telemetry: Ones_API_For_Network_Telemetry/Streaming_Telemetry/StreamingTelemetry.md
     - Overview - ONES Agent:
