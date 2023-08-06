@@ -1,4 +1,4 @@
-# Integrate ONES with Prometheus
+# ONES Integration with Prometheus
 
 ##  Steps for Integrate ONES with Prometheus
 
