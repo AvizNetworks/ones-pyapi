@@ -15,7 +15,7 @@ ONES APIs supports following interfaces
 
 
 ## Installation
-> **Download link** - https://github.com/AvizNetworks/ones-restapi/blob/master/versions/onse-pyapi-1.0.0.tar.gz
+> **Download link** - https://github.com/AvizNetworks/ones-pyapi/blob/master/versions/ones-pyapi-1.0.0.tar.gz
 ```sh
 pip install onse-pyapi-1.0.0.tar.gz
 ```
