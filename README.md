@@ -19,3 +19,27 @@ ONES APIs supports following interfaces
 ```sh
 pip install onse-pyapi-1.0.0.tar.gz
 ```
+
+It has two clients.
+1. Day1 and Day2 Operations (FM APIs)  - FMClient
+2. APIs for NetOps Monitoring - ONESClient
+
+### Importing client (NetOps)
+
+```py
+from restclient.telemetry.client import ONESClient 
+```
+
+### Initialize client 
+
+```py
+conn = ONESClient("https://10.x.x.x:443", "username", "password")
+
+conn.connect()
+```
+
+Examples -
+1. NetOps Monitoring API call - (link)[https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/telemetry]
+2. Day1 Operations - (link)[https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day1fm]
+3. Day2 Operations - (link)[https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day2fm]
+
