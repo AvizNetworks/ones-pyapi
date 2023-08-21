@@ -25,10 +25,7 @@ theme:
       - Overview - NetOps APIs:
         - Topology: Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Topology.md
         - Inventory: Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Inventory.md
-        - Health:
-          - Platform: Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Health/Platform.md
-          - System: Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Health/System.md
-          - Control: Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Health/Control.md
+        - Health: Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Health.md
         - Traffic: Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Traffic.md
       - Streaming Telemetry: Ones_API_For_Network_Telemetry/Streaming_Telemetry/StreamingTelemetry.md
       - Overview - ONES Agent:
