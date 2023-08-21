@@ -10,7 +10,6 @@ ONES APIs supports following interfaces
 ## Features
 > Can connect with python environment and make ONES APIs operation seamlessly.
 > For Developers and Network Engineers
-> Supported version -> Python 3.7 and above 
 
 
 ## Installation
