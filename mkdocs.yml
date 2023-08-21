@@ -17,6 +17,7 @@ theme:
       alternate_style: true
   nav:
     - Overview: index.md
+    - Installation: Installation.md
     - ONES APIs for Network Telemetry: 
       - Overview: Ones_API_For_Network_Telemetry/Overview.md
   # - API Documentation:
