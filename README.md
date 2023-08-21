@@ -15,31 +15,28 @@ ONES APIs supports following interfaces
 
 
 ## Installation
-> **Download link** - https://github.com/AvizNetworks/ones-pyapi/blob/master/versions/ones-pyapi-1.0.0.tar.gz
+
+Please follow the below steps to install ONES PyAPI client and use Day1, Day2 and NetOPs APIs with single function call.
+
+
+### Prerequisites
+- python 3.9 and above
+- pip 21.2.4 and above
+- download ones-pyapi-1.0.0.tar.gz package from [here](https://github.com/AvizNetworks/ones-pyapi/blob/master/versions/ones-pyapi-1.0.0.tar.gz)
+
+### Install package
 ```sh
-pip install onse-pyapi-1.0.0.tar.gz
+pip install ones-pyapi-1.0.0.tar.gz
+```
+if above command not worked, tried with pip3
+```sh
+pip3 install ones-pyapi-1.0.0.tar.gz
 ```
 
-It has two clients.
-1. Day1 and Day2 Operations (FM APIs)  - FMClient
-2. APIs for NetOps Monitoring - ONESClient
-
-### Importing client (NetOps)
-
-```py
-from restclient.telemetry.client import ONESClient 
-```
-
-### Initialize client 
-
-```py
-conn = ONESClient("https://10.x.x.x:443", "username", "password")
-
-conn.connect()
-```
-
-Examples -
+Now you can Import and use clients, please refer below examples - 
 1. NetOps Monitoring API call - (link)[https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/telemetry]
 2. Day1 Operations - (link)[https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day1fm]
 3. Day2 Operations - (link)[https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day2fm]
 
+
+If something went wrong. or Expecting new features, let us know - [here](https://github.com/AvizNetworks/ones-pyapi/issues)
