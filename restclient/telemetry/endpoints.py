@@ -61,3 +61,7 @@ health_running_services = "/api/health/servicesrunning"
 traffic_util = "/api/Traffic/util"
 traffic_counters = "/api/Traffic/counters"
 
+# Utilization Endpoints
+ipv4_routes = "/api/utilization/ipv4routes"
+ipv6_routes = "/api/utilization/ipv6routes"
+acls_routes = "/api/utilization/acls"

@@ -217,7 +217,7 @@ class ONESClient(object):
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
             "toDate" : "2023-05-12 12:55:24",
-            "deviceAddress" : "10.4.4.55"
+            "deviceAddress" : "10.x.x.x"
         }
         """
         request_handler_with_query_params(self.url, cpu_utilization, self.access_token, None, arg1)
@@ -227,7 +227,7 @@ class ONESClient(object):
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
             "toDate" : "2023-05-12 12:55:24",
-            "deviceAddress" : "10.4.4.55"
+            "deviceAddress" : "10.x.x.x"
         }
         """
         request_handler_with_query_params(self.url, memory_utilization, self.access_token, None, arg1)
@@ -237,7 +237,7 @@ class ONESClient(object):
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
             "toDate" : "2023-05-12 12:55:24",
-            "deviceAddress" : "10.4.4.55"
+            "deviceAddress" : "10.x.x.x"
         }
         """
         request_handler_with_query_params(self.url, cpu_core_temperaure, self.access_token, None, arg1)
@@ -247,7 +247,7 @@ class ONESClient(object):
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
             "toDate" : "2023-05-12 12:55:24",
-            "deviceAddress" : "10.4.4.55"
+            "deviceAddress" : "10.x.x.x"
         }
         """
         request_handler_with_query_params(self.url, psu_temperature, self.access_token, None, arg1)
@@ -257,7 +257,7 @@ class ONESClient(object):
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
             "toDate" : "2023-05-12 12:55:24",
-            "deviceAddress" : "10.4.4.55"
+            "deviceAddress" : "10.x.x.x"
         }
         """
         request_handler_with_query_params ( self.url, psu_voltage, self.access_token, None, arg1)
@@ -267,7 +267,7 @@ class ONESClient(object):
         query_params -> {
            "fromDate" : "2023-05-12 11:55:24",
            "toDate" : "2023-05-12 12:55:24",
-           "deviceAddress" : "10.4.4.55"
+           "deviceAddress" : "10.x.x.x"
         }
         """
         request_handler_with_query_params(self.url, psu_current, self.access_token, None, arg1)
@@ -277,7 +277,7 @@ class ONESClient(object):
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
             "toDate" : "2023-05-12 12:55:24",
-            "deviceAddress" : "10.4.4.55"
+            "deviceAddress" : "10.x.x.x"
         }
         """
         request_handler_with_query_params(self.url, fan_speed, self.access_token, None, arg1)
@@ -287,7 +287,7 @@ class ONESClient(object):
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
             "toDate" : "2023-05-12 12:55:24",
-            " deviceAddress" : "10.4.4.55"
+            " deviceAddress" : "10.x.x.x"
         }
         """
         request_handler_with_query_params(self.url, psu_power, self.access_token, None, arg1)
@@ -297,7 +297,7 @@ class ONESClient(object):
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
             "toDate" : "2023-05-12 12:55:24",
-            "deviceAddress" : "10.4.4.55"
+            "deviceAddress" : "10.x.x.x"
         }
         """
         request_handler_with_query_params(self.url, health_services_cpu, self.access_token, None, arg1)
@@ -307,7 +307,7 @@ class ONESClient(object):
         query_params -> {
             "fromDate" : "2023-05-12 11:55:24",
             "toDate" : "2023-05-12 12:55:24",
-            "deviceAddress" : "10.4.4.55"
+            "deviceAddress" : "10.x.x.x"
         }
         """
         request_handler_with_query_params(self.url, health_services_memory, self.access_token, None, arg1)
@@ -317,7 +317,7 @@ class ONESClient(object):
         query_params -> {
             "fromDate" : "2023-04-04 04:54:27",
             "toDate" : "2023-04-04 05:54:27",
-            "deviceAddress" : "10.4.4.55"
+            "deviceAddress" : "10.x.x.x"
         }
         """
         request_handler_with_query_params(self.url, health_bgp_neighbors, self.access_token, None, arg1)
@@ -325,7 +325,7 @@ class ONESClient(object):
     def get_health_trancievers(self, arg1):
         """ 
         query_params -> {
-            "ipAddress" : "10.4.4.55",
+            "ipAddress" : "10.x.x.x",
             "ifName" : "Ethernet0",
             "fromDate" : "2023-06-26 10:48:55",
             "toDate" : "2023-06-26 11:48:55"
@@ -338,7 +338,7 @@ class ONESClient(object):
         query_params -> {
                     "fromDate" : "2023-05-12 11:55:24",
                     "toDate" : "2023-05-12 12:55:24",
-                    "deviceAddress" : "10.4.4.55"
+                    "deviceAddress" : "10.x.x.x"
         }
         """
         request_handler_with_query_params(self.url, health_running_services, self.access_token, None, arg1)
@@ -349,7 +349,7 @@ class ONESClient(object):
             {
                 "fromDate" : "2023-04-04 04:54:27",
                 "toDate" : "2023-04-04 05:54:27",
-                "deviceAddress" : "10.4.4.55",
+                "deviceAddress" : "10.x.x.x",
                 "ifname" : "Ethernet0"
             }
         }
@@ -362,7 +362,7 @@ class ONESClient(object):
             {
                 "fromDate" : "2023-04-04 04:54:27",
                 "toDate" : "2023-04-04 05:54:27",
-                "deviceAddress" : "10.4.4.55",
+                "deviceAddress" : "10.x.x.x",
                 "ifname" : "Ethernet0"
             }
         }
@@ -370,6 +370,32 @@ class ONESClient(object):
         request_handler_with_query_params(self.url, traffic_counters, self.access_token, None, arg1)
         
             
-        
-        
-    
+    def get_ipv4_utilization(self, arg1):
+        """
+        query_params -> "filter" : {
+            {
+                "ipAddress" : "10.x.x.x"
+            }
+        }
+        """
+        request_handler_with_query_params(self.url, ipv4_routes, self.access_token, None, arg1)
+
+    def get_ipv6_utilization(self, arg1):
+        """
+        query_params -> "filter" : {
+            {
+                "ipAddress" : "10.x.x.x"
+            }
+        }
+        """
+        request_handler_with_query_params(self.url, ipv6_routes, self.access_token, None, arg1)
+
+    def get_acls(self, arg1):
+        """
+        query_params -> "filter" : {
+            {
+                "ipAddress" : "10.x.x.x"
+            }
+        }
+        """
+        request_handler_with_query_params(self.url, acls_routes, self.access_token, None, arg1)
