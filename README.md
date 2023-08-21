@@ -34,9 +34,9 @@ pip3 install ones-pyapi-1.0.0.tar.gz
 ```
 
 Now you can Import and use clients, please refer below examples - 
-1. NetOps Monitoring API call - (link)[https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/telemetry]
-2. Day1 Operations - (link)[https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day1fm]
-3. Day2 Operations - (link)[https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day2fm]
+1. NetOps Monitoring API call - [link](https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/telemetry)
+2. Day1 Operations - [link](https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day1fm)
+3. Day2 Operations - [link](https://github.com/AvizNetworks/ones-pyapi/tree/master/examples/day2fm)
 
 
 If something went wrong. or Expecting new features, let us know - [here](https://github.com/AvizNetworks/ones-pyapi/issues)
