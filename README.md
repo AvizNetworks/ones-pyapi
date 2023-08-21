@@ -4,8 +4,7 @@ Aviz ONES is the industry's first multi-vendor platform which provides seamless 
 
 ONES APIs supports following interfaces
 - gNMI (Secured using certificates)
-- REST API (Secured using user tokens)
-
+- REST API (Secured using user token
 
 
 ## Features
