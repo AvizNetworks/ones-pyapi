@@ -1,12 +1,12 @@
 ## Capacity
 
-<b> Import Client </b>
+### Import Client 
 
 ```py
 from restclient.telemetry.client import ONESClient 
 ```
 
-<b> Initialize client </b>
+### Initialize client 
 
 ```py
 conn = ONESClient("https://10.x.x.x:443", "username", "password")
@@ -14,7 +14,8 @@ conn = ONESClient("https://10.x.x.x:443", "username", "password")
 conn.connect()
 ```
 
-<b>Capacity based on the latest telemetry for ipv4_routes used and available. </b>
+### IPV4 Utilization
+<p>Capacity based on the latest telemetry for ipv4_routes used and available. </p>
 
 ```py
 query_params = {
@@ -24,7 +25,8 @@ query_params = {
 res = conn.get_ipv4_utilization(query_params)
 ```
 
-<b>Capacity based on the latest telemetry for ipv6_routes used and available. </b>
+### IPV6 Utilization
+<p>Capacity based on the latest telemetry for ipv6_routes used and available. </p>
 
 ```py
 query_params = {
@@ -34,7 +36,8 @@ query_params = {
 res = conn.get_ipv6_utilization(query_params)
 ```
 
-<b>Number of Total ACL capacity and it's usage in percentage</b>
+### ACL Utilization
+<p>Number of Total ACL capacity and it's usage in percentage</p>
 
 ```py
 query_params = {

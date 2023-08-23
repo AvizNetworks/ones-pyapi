@@ -14,6 +14,7 @@ conn = ONESClient("https://10.x.x.x:443", "username", "password")
 conn.connect()
 ```
 
+### Traffic Counters
 <b>Timeseries data of Average count of In/out packets & Total count of errors & discards of Interface, for a given device.</b>
 
 ```py
@@ -26,6 +27,7 @@ query_params = {
 res = conn.get_traffic_counters(query_params)
 ```
 
+### Traffic Utilization
 <b>Timeseries data of Average count of In/out link utilization of Interface, for a given device.</b>
 
 ```py

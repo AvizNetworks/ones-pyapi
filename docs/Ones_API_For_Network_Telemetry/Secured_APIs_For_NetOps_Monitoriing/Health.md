@@ -14,12 +14,13 @@ conn  = ONESClient(url ='https://10.x.x.x', username="YOUR_USERNAME", password="
 conn.connect() 
 ```
 
-###  Calling Methods
+<b> Calling Methods</b>
 
 Please Note, You can pass device_address or ip_address, both will work.
 
 
-<b>Timeseries data for CPU utilization for a given device. </b>
+### CPU Utilization
+<p>Timeseries data for CPU utilization for a given device. </p>
 
 ```py
 print("CPU_UTILIZATION")
@@ -31,7 +32,8 @@ query_params =  {
 print(conn.get_cpu_utilization(query_params))
 ```
 
-<b>Timeseries data for Memory utilization for a given device. </b>
+### Memory Utilization
+<p>Timeseries data for Memory utilization for a given device. </p>
 
 ```py
 print("MEMORY_UTILIZATION")
@@ -43,7 +45,8 @@ query_params = {
 print(conn.get_memory_utilization(query_params))
 ```
 
-<b>Timeseries data for CPU cores temprature for a given device. </b>
+### CPU Core Temperature
+<p>Timeseries data for CPU cores temprature for a given device. </p>
 
 ```py
 print("CPU_CORE_TEMPERATURE")
@@ -55,7 +58,8 @@ query_params = {
 print(conn.get_cpu_core_temperaure(query_params))
 ```
 
-<b>Timeseries data  of the temperature of PSUs for a given device. </b>
+### PSU Temperature
+<p>Timeseries data  of the temperature of PSUs for a given device. </p>
 
 ```py
 print("PSU_TEMPERATURE")
@@ -67,7 +71,9 @@ query_params = {
 print(conn.get_psu_temperature(query_params))
 ``` 
 
-<b>Timeseries data of voltage readings on PSU for a given device. </b>
+### PSU Voltage
+
+<p>Timeseries data of voltage readings on PSU for a given device. </p>
 
 ```py
 print("PSU_VOLTAGE")
@@ -79,7 +85,9 @@ query_params = {
 print(conn.get_psu_voltage(query_params))
 ```
 
-<b> Timeseries data of current readings on PSU for a given device. </b>
+
+### PSU Current
+<p> Timeseries data of current readings on PSU for a given device. </p>
 
 ```py
 print("PSU_CURRENT")
@@ -91,7 +99,8 @@ query_params = {
 print(conn.get_psu_current(query_params))
 ```
 
-<b>Timeseries data for speed across all fans related to a device. </b>
+### Fan Speed
+<p>Timeseries data for speed across all fans related to a device. </p>
 
 ```py
 print("FAN_SPEED")
@@ -104,7 +113,8 @@ print(conn.get_fan_speed(query_params))
 ```
 
 
-<b> Timeseries data of power readings on PSU for a given device. </b>
+### PSU Power
+<p> Timeseries data of power readings on PSU for a given device. </p>
 
 ```py
 print("PSU_POWER")
@@ -116,7 +126,9 @@ query_params = {
 print(conn.get_psu_power(query_params))
 ```
 
-<b>Timeseries data for CPU utilization across services for a given device </b>
+
+### HEALTH SERVICES CPU
+<p>Timeseries data for CPU utilization across services for a given device </p>
 
 ```py
 print("HEALTH_SERVICES_CPU")
@@ -128,7 +140,9 @@ query_params = {
 print(conn.get_health_services_cpu(query_params))
 ```
 
-<b>Timeseries data for Memory utilization across services for a given device </b>
+
+### HEALTH SERVICES MEMORY
+<p>Timeseries data for Memory utilization across services for a given device </p>
 
 ```py
 print("HEALTH_SERVICES_MEMORY")
@@ -140,7 +154,9 @@ query_params = {
 print(conn.get_health_services_memory(query_params))
 ```
 
-<b>Timeseries data of count of up and down status for bgp neighbours.</b>
+
+### Health BGP Neighbors
+<p>Timeseries data of count of up and down status for bgp neighbours.</p>
 
 ```py
 print("HEALTH_BGP NEIGHBORS")
@@ -152,7 +168,8 @@ query_params = {
 print(conn.get_health_bgp_neighbors(query_params))
 ```
 
-<b>Timeseries data for transceiver connected to selected port. ( Rx/Tx power, temperature & Voltage).</b>
+### Health Transcievers
+<p>Timeseries data for transceiver connected to selected port. ( Rx/Tx power, temperature & Voltage).</p>
 
 ```py
 print("HEALTH_TRANSCIEVERS")
@@ -165,7 +182,9 @@ query_params = {
 print(conn.get_health_trancievers(query_params))
 ```
 
-<b>Timeseries data of number of services running for a given device. </b>
+
+### Health Running Services
+<p>Timeseries data of number of services running for a given device. </p>
 
 ```py
 print("HEALTH_RUNNING_SERVICES")

@@ -18,7 +18,8 @@ conn = ONESClient("https://10.x.x.x:443", "username", "password")
 conn.connect()
 ```
 
-<b> Calling Method for getting topology dumop </b>
+### Topology
+<p> Calling Method for getting topology dumop </p>
 
 ```py   
 topology_details = conn.get_network_topology()
