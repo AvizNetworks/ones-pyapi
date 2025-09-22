@@ -25,27 +25,50 @@ from .exceptions import FMClientExpection
 from .constants import *
 import logging
 
-def get_request_handler(url, endpoint, error_msg, params):
+logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.INFO)
+
+EXPECTED_APP_ERRORS = {400, 404, 409}
+
+def handle_api_response(response, error_msg):
+    try:
+        try:
+            content = response.json()
+        except ValueError:
+            content = response.text.strip()
+            
+        if response.status_code in [200, 201]:
+            return content
+
+        elif response.status_code in EXPECTED_APP_ERRORS:
+            msg = content.get("message", content) if isinstance(content, dict) else content
+            logging.error(f"{error_msg}")
+            return {"status": response.status_code, "message": msg }
+        else:
+            # Unexpected HTTP status
+            logging.error(f"Request failed: {response.status_code}")
+            raise FMClientExpection(f"{error_msg} (HTTP {response.status_code})")
+    except Exception as e:
+        logging.error(f"Unexpected error occurred: {str(e)}")
+        raise FMClientExpection(f"{error_msg}: Unexpected error")
+    
+def get_request_handler(url, endpoint, error_msg, params=None):
     try:
         url = url + endpoint
         headers = {
             "Content-Type": "application/json",
         }
 
-        # Request coming with params
-        if params != None:
-            params = params
-            response = requests.get(url, headers=headers, params=params)
-
-        # Request coming without params
+        if params:
+            response = requests.get(url, headers=headers, params=params, verify=False, timeout=10)
         else:
-            response = requests.get(url, headers=headers, verify=False)
-
-        res = response.json()
-        return res
+            response = requests.get(url, headers=headers, verify=False, timeout=30)
+        return handle_api_response(response,error_msg)
+    except Exception as e:
+        logging.error(f"Unexpected error occurred: {str(e)}")
+        raise FMClientExpection(f"{error_msg}: Unexpected error")
     
     except Exception as err:
-        logging.error(err)
+        # logging.error(err)
         raise FMClientExpection(error_msg)
     
 
@@ -56,10 +79,39 @@ def post_request_handler(url, endpoint, error_msg, payload):
             'Content-Type': 'application/json; charset=utf-8',
         }
         response = requests.post(url, headers=headers, json= payload, verify= False)
-        res = response.json()
-        return res
+        return handle_api_response(response,error_msg)
+    except Exception as e:
+        logging.error(f"Unexpected error occurred: {str(e)}")
+        raise FMClientExpection(f"{error_msg}: Unexpected error")
+
+def patch_request_handler(url, endpoint, error_msg, payload):
+    try:
+        url = url + endpoint
+        headers= {
+            'Content-Type': 'application/json; charset=utf-8',
+        }
+        response = requests.patch(url, headers=headers, json= payload, verify= False)
+        return handle_api_response(response,error_msg)
+    except Exception as e:
+        logging.error(f"Unexpected error occurred: {str(e)}")
+        raise FMClientExpection(f"{error_msg}: Unexpected error")
     
     except Exception as err:
         logging.error(err)
         return FMClientExpection(error_msg)
 
+def delete_request_handler(url, endpoint, error_msg):
+    try:
+        url = url + endpoint
+        headers= {
+            'Content-Type': 'application/json; charset=utf-8',
+        }
+        response = requests.delete(url, headers=headers, verify= False)
+        return handle_api_response(response,error_msg)
+    except Exception as e:
+        logging.error(f"Unexpected error occurred: {str(e)}")
+        raise FMClientExpection(f"{error_msg}: Unexpected error")
+    
+    except Exception as err:
+        logging.error(err)
+        return FMClientExpection(error_msg)

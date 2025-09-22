@@ -27,5 +27,5 @@ class FMClientExpection(Exception):
     def __init__(self, msg =None):
         if msg is None:
             return "Somethiong went wrong in FMClient."
-        return msg
+        super().__init__(msg)
     

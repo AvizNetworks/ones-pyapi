@@ -23,7 +23,7 @@ SOFTWARE.
 from .endpoints import *
 from .exceptions import *
 from .constants import *
-from .utils import get_request_handler, post_request_handler
+from .utils import get_request_handler, post_request_handler, patch_request_handler, delete_request_handler
 import requests
 import logging
 
@@ -166,3 +166,45 @@ class FMClient(object):
         except Exception as err:
             logging.error(err)
             raise FMClientExpection(UPLOAD_IMAGE_ERROR)
+
+    def create_tenant(self, fabric_name, payload):
+        """ 
+        To creates a new tenant in the specified fabric..
+        Method -> Post
+        Payload -> { "tenantName": "Pepsi", "description": "Pepsi Tenant for Compute", "maxGpusAllowed": 32 }
+        """
+        endpoint = create_tenant_endpoint.format(fabricName=fabric_name)
+        return post_request_handler(self.url, endpoint, CREATE_TENANT_ERROR, payload)
+
+    def delete_tenant(self, fabric_name, tenant_name):
+        """ 
+        To creates a new tenant in the specified fabric..
+        Method -> Delete
+        """
+        endpoint = delete_tenant_endpoint.format(fabricName=fabric_name,tenantName=tenant_name)
+        return delete_request_handler(self.url, endpoint, DELETE_TENANT_ERROR)
+
+    def update_tenant_gpus(self, fabric_name, tenant_name, payload):
+        """ 
+        Allocates GPUs for a tenant.
+        Method -> Patch
+        payload ->  { "operation": "ADD", "servers": ["hgx-su00-h00", "hgx-su00-h01"] }
+        """
+        endpoint = update_tenant_gpus_endpoint.format(fabricName=fabric_name,tenantName=tenant_name)
+        return patch_request_handler(self.url, endpoint, UPDATE_TENANT_ERROR, payload)
+    
+    def list_tenants(self, fabric_name):
+        """ 
+        Allocates GPUs for a tenant.
+        Method -> Get
+        """
+        endpoint = list_tenants_endpoint.format(fabricName=fabric_name)
+        return get_request_handler(self.url, endpoint, GET_TENANT_LIST_ERROR)
+    
+    def get_tenant_details(self, fabric_name, tenant_name):
+        """ 
+        Allocates GPUs for a tenant.
+        Method -> Get
+        """
+        endpoint = get_tenant_details_endpoint.format(fabricName=fabric_name,tenantName=tenant_name)
+        return get_request_handler(self.url, endpoint, GET_TENANT_DETAIL_ERROR)
