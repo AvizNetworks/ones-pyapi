@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ones-pyapi"
+version = "0.1.2"
+description = "Python SDK for ONES (Aviz Networks)"
+authors = [
+    { name="Kavyansh Pandey", email="kavyansh.pandey@aviznetworks.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+    "requests"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]

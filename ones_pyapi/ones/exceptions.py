@@ -1,0 +1,2 @@
+class OnesClientException(Exception):
+    pass
